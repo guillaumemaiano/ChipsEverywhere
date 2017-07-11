@@ -53,5 +53,13 @@ void relayPollingErrors() {
       relayPollingErrors();
     }
   }
+  if (!dataPolled.isFailed) {
+    Serial.print("Humidity: "); 
+    Serial.print(dataPolled.humi);
+    Serial.print(" %\t");
+    Serial.print("Temperature: "); 
+    Serial.print(dataPolled.temp);
+    Serial.println(" °C ");
+  }
  }
 
